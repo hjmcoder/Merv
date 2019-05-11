@@ -2,17 +2,8 @@
 
 MERV (Multi Expandable RecyclerView) is library that you can use it for nested expandable RecyclerView.
 
-
-<div style="text-align: center">
-    <table>
-        <tr>
-            <td style="text-align: center">
-              ![](merv.gif)
-            </td>            
-                   
-        </tr>
-         </table>
-</div>
+![alt-text](merv.gif)
+ 
 ## Installation
 ### Step 1. Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
