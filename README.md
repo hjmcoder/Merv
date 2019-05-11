@@ -58,5 +58,50 @@ final MervAdapter mervAdapter = new MervAdapter(getMervs(), new MervClick.OnItem
 ```java
 mervView.setMervAdapter(mervAdapter);
 ```
+
+### Sample Data, Nested ArrayList with MervModel
+
+```
+    private ArrayList<MervModel> getMervs() {
+        ArrayList<MervModel> mervModels = new ArrayList<>();
+        MervModel a1 = new MervModel(0,"a1",false,true,false);
+        MervModel a2 = new MervModel(1,"a2",false,true,false);
+        MervModel a3 = new MervModel(2,"a3",false,false,false);
+        MervModel b1 = new MervModel(3,"b1",true,false,false);
+        MervModel b2 = new MervModel(4,"b2",true,false,false);
+        MervModel b3 = new MervModel(5,"b3",true,true,false);
+        MervModel b4 = new MervModel(5,"b4",true,false,false);
+        MervModel b5 = new MervModel(5,"b5",true,false,false);
+        MervModel c1 = new MervModel(6,"c1",true,false,false);
+        MervModel c2 = new MervModel(6,"c2",true,false,false);
+        MervModel c3 = new MervModel(6,"c3",true,false,false);
+        MervModel c4 = new MervModel(6,"c4",true,false,false);
+        MervModel c5 = new MervModel(6,"c5",true,false,false);
+
+        a1.setChildList(new ArrayList<MervModel>());
+        a2.setChildList(new ArrayList<MervModel>());
+        b2.setChildList(new ArrayList<MervModel>());
+        b3.setChildList(new ArrayList<MervModel>());
+
+        b3.getChildList().add(c1);
+        b3.getChildList().add(c2);
+        b3.getChildList().add(c3);
+        b3.getChildList().add(c4);
+        b3.getChildList().add(c5);
+
+        a2.getChildList().add(b2);
+        a2.getChildList().add(b3);
+        a2.getChildList().add(b4);
+        a2.getChildList().add(b5);
+        a1.getChildList().add(b1);
+
+
+        mervModels.add(a1);
+        mervModels.add(a2);
+        mervModels.add(a3);
+
+        return mervModels;
+    }
+```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
