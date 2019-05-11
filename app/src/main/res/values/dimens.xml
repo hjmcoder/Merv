@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="merv_item_height">48dp</dimen>
+    <dimen name="imb_width_height">48dp</dimen>
+    <dimen name="item_margin_start">48dp</dimen>
+    <dimen name="item_margin_end">16dp</dimen>
+</resources>
